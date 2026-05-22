@@ -1,4 +1,4 @@
-/* ===== RESET & BASE ===== */
+/* RESET & BASE */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -33,14 +33,14 @@ body {
   min-height: 100vh;
 }
 
-/* ===== APP SHELL ===== */
+/* APP SHELL */
 .app {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 0 3rem;
 }
 
-/* ===== HEADER ===== */
+/*HEADER  */
 .header {
   background: var(--duck-green);
   padding: 18px 24px;
@@ -135,7 +135,7 @@ body {
 .today-btn:active { transform: scale(0.97); }
 .today-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 
-/* ===== ADD BAR ===== */
+/* ADD BAR */
 .add-bar {
   display: flex;
   gap: 8px;
@@ -180,7 +180,7 @@ body {
 .add-btn:active { transform: scale(0.97); }
 .add-btn:focus-visible { outline: 2px solid var(--duck-green); outline-offset: 2px; }
 
-/* ===== GRID ===== */
+/*  GRID  */
 .grid-scroll {
   overflow-x: auto;
   background: var(--surface);
@@ -373,7 +373,7 @@ tr:hover .del-btn { opacity: 1; }
 .del-btn:hover { color: var(--danger); background: rgba(224,69,58,0.08); }
 .del-btn:focus-visible { outline: 2px solid var(--danger); outline-offset: 2px; opacity: 1; }
 
-/* ===== EMPTY STATE ===== */
+/*EMPTY STATE  */
 .empty-state {
   text-align: center;
   padding: 60px 24px;
@@ -402,7 +402,7 @@ tr:hover .del-btn { opacity: 1; }
   margin: 0 auto 6px;
   line-height: 1.6;
 }
-/* ===== MODAL ===== */
+/* MODAL */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -460,7 +460,7 @@ tr:hover .del-btn { opacity: 1; }
 .modal-cancel:focus-visible,
 .modal-save:focus-visible { outline: 2px solid var(--duck-green); outline-offset: 2px; }
 
-/* ===== CHECK POP ANIMATION ===== */
+/*CHECK POP ANIMATION  */
 @keyframes pop {
   0% { transform: scale(1); }
   40% { transform: scale(1.35); }
@@ -469,7 +469,7 @@ tr:hover .del-btn { opacity: 1; }
 }
 .check-btn.pop { animation: pop 0.25s ease; }
 
-/* ===== RESPONSIVE ===== */
+/*RESPONSIVE*/
 @media (max-width: 600px) {
   .header {
     padding: 14px 16px;
