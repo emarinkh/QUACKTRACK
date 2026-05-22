@@ -1,0 +1,97 @@
+<!--<!DOCTYPE html>
+<html  lang="en">
+
+</html>
+<do
+ctypehtml>
+
+
+</doctypehtml>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>QuackTrack 🦆</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <span class="duck">🦆</span>
+      <div>
+        <h1>QuackTrack</h1>
+        <p class="tagline">Daily habits, one quack at a time</p>
+      </div>
+    </div>
+    <div class="week-nav">
+      <button class="nav-btn" id="prevWeek" aria-label="Previous week">&#8592;</button>
+      <span class="week-range" id="weekRange">Loading…</span>
+      <button class="nav-btn" id="nextWeek" aria-label="Next week">&#8594;</button>
+      <button class="today-btn" id="toToday">Today</button>
+    </div>
+  </header>
+
+  <!-- ADD HABIT BAR -->
+  <div class="add-bar">
+    <input
+      type="text"
+      id="habitInput"
+      class="habit-input"
+      placeholder="Add a habit… e.g. Read 30 min, Exercise, Drink water"
+      maxlength="50"
+      autocomplete="off"
+    />
+    <button class="add-btn" id="addBtn">+ Add</button>
+  </div>
+
+  <!-- GRID CONTAINER -->
+  <div class="grid-scroll">
+    <table class="habit-grid" id="habitGrid" role="grid" aria-label="Weekly habit grid">
+      <thead id="gridHead"></thead>
+      <tbody id="gridBody"></tbody>
+    </table>
+  </div>
+
+  <!-- EMPTY STATE -->
+  <div class="empty-state" id="emptyState" hidden>
+    <div class="empty-duck">🦆</div>
+    <h2>No habits yet!</h2>
+    <p>Add your first habit above and start quacking towards your goals.</p>
+    <p class="empty-hint">Try: <em>Read 30 min</em>, <em>Exercise</em>, or <em>Drink 2L water</em></p>
+  </div>
+
+  <!-- FOOTER LEGEND -->
+  <footer class="legend">
+    <span class="legend-item"><span class="check-done-ex">✓</span> Done</span>
+    <span class="legend-item"><span class="check-empty-ex"></span> Not done</span>
+    <span class="legend-item"><span class="check-future-ex"></span> Upcoming</span>
+    <span class="legend-item"><span class="streak-ex">🔥 3</span> Streak</span>
+  </footer>
+
+</div>
+
+<!-- RENAME MODAL -->
+<div class="modal-overlay" id="modalOverlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h3 id="modalTitle">Rename Habit</h3>
+    <input type="text" id="renameInput" class="habit-input" maxlength="50" />
+    <div class="modal-btns">
+      <button class="modal-cancel" id="modalCancel">Cancel</button>
+      <button class="modal-save" id="modalSave">Save</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
